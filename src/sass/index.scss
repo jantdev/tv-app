@@ -1,0 +1,136 @@
+@import "~bootstrap/scss/bootstrap.scss";
+
+$maincolor: #00a3d9;
+$lightmain: lighten($maincolor, 50%);
+$altlightmain: lighten($maincolor, 20%);
+$info: #fe7900;
+$text: #333;
+$mainwhite: #fff;
+
+.logosm {
+  width: 32px;
+  height: 32px;
+}
+
+._navbar {
+  ._navbarbg {
+    background: $maincolor;
+  }
+  .logotext {
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: $mainwhite;
+  }
+}
+
+._top {
+  padding: 15px;
+}
+
+.demo {
+  padding: 12px 0px 10px 0px;
+  color: #e74809;
+}
+.demo2 {
+  padding: 12px 0px 10px 0px;
+  color: #e74809;
+  text-align: center;
+}
+.SearchTitleOptions {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+.navshows {
+  display: grid;
+  grid-template-columns: 50px auto 50px;
+
+  .navbutton {
+    position: relative;
+    width: 50px;
+    height: 60px;
+    background-color: $mainwhite;
+    opacity: 0.65;
+    color: $text;
+    border: none;
+    border-radius: 0px;
+    line-height: 53px;
+    top: calc(50% - 20px);
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .previous {
+    z-index: 10;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    &::before {
+      content: "←";
+    }
+  }
+  .next {
+    z-index: 10;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    &::before {
+      content: "→";
+    }
+  }
+  .shows {
+    position: relative;
+
+    overflow: hidden;
+    width: calc(100% + 100px);
+    height: 450px;
+    left: -50px;
+  }
+}
+.holder {
+  display: grid;
+  grid-template-columns: repeat(1000, 200px);
+  grid-column-gap: 10px;
+
+  .showcard {
+    position: relative;
+    color: $text;
+    background: $lightmain;
+    width: 202px;
+    cursor: pointer;
+    img {
+      width: 200px;
+      margin-left: 1px;
+      margin-top: 1px;
+    }
+    h4 {
+      padding: 8px 0px 0px 5px;
+      font-size: 18px;
+    }
+    p {
+      padding-left: 5px;
+    }
+    span {
+      position: absolute;
+      display: inline-block;
+      line-height: 48px;
+      right: 6px;
+      bottom: 134px;
+      width: 50px;
+      height: 50px;
+      background-color: $info;
+      border-radius: 50%;
+      text-align: center;
+      color: $mainwhite;
+      font-weight: bold;
+    }
+    .schedule {
+      position: absolute;
+      z-index: 20;
+      top: 408px;
+      background: $altlightmain;
+      padding: 10px 0px 10px 10px;
+      width: 202px;
+      color: $text;
+    }
+  }
+}

@@ -1,0 +1,704 @@
+{
+  "testdata": [
+    {
+      "id": 1679251,
+      "url": "http://www.tvmaze.com/episodes/1679251/the-young-and-the-restless-2019-07-08-ep-11723",
+      "name": "Ep. #11723",
+      "season": 2019,
+      "number": 133,
+      "airdate": "2019-07-08",
+      "airtime": "12:30",
+      "airstamp": "2019-07-08T16:30:00+00:00",
+      "runtime": 60,
+      "image": null,
+      "summary": null,
+      "show": {
+        "id": 4344,
+        "url": "http://www.tvmaze.com/shows/4344/the-young-and-the-restless",
+        "name": "The Young and the Restless",
+        "type": "Scripted",
+        "language": "English",
+        "genres": ["Drama", "Family", "Romance"],
+        "status": "Running",
+        "runtime": 60,
+        "premiered": "1973-03-26",
+        "officialSite": "http://www.cbs.com/shows/the_young_and_the_restless/",
+        "schedule": {
+          "time": "12:30",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        },
+        "rating": {
+          "average": 6.2
+        },
+        "weight": 91,
+        "network": {
+          "id": 2,
+          "name": "CBS",
+          "country": {
+            "name": "United States",
+            "code": "US",
+            "timezone": "America/New_York"
+          }
+        },
+        "webChannel": null,
+        "externals": {
+          "tvrage": 6318,
+          "thetvdb": 70328,
+          "imdb": "tt0069658"
+        },
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/20/51462.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/20/51462.jpg"
+        },
+        "summary": "<p><b>The Young and the Restless</b> revolves around the rivalries, romances, hopes and fears of the residents of the fictional Midwestern metropolis, Genoa City. The lives and loves of a wide variety of characters mingle through the generations, dominated by the Newman, Abbott, Chancellor, Baldwin and Winters families. ­ When The Young and the Restless premiered in 1973, it revolutionized the daytime drama. It continues to set the standard with strong characters, socially conscious storylines, romance and sensuality.</p>",
+        "updated": 1562549259,
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/shows/4344"
+          },
+          "previousepisode": {
+            "href": "http://api.tvmaze.com/episodes/1679251"
+          },
+          "nextepisode": {
+            "href": "http://api.tvmaze.com/episodes/1679252"
+          }
+        }
+      },
+      "_links": {
+        "self": {
+          "href": "http://api.tvmaze.com/episodes/1679251"
+        }
+      }
+    },
+    {
+      "id": 1676806,
+      "url": "http://www.tvmaze.com/episodes/1676806/days-of-our-lives-2019-07-08-ep-13631",
+      "name": "Ep. #13631",
+      "season": 2019,
+      "number": 131,
+      "airdate": "2019-07-08",
+      "airtime": "13:00",
+      "airstamp": "2019-07-08T17:00:00+00:00",
+      "runtime": 60,
+      "image": null,
+      "summary": null,
+      "show": {
+        "id": 812,
+        "url": "http://www.tvmaze.com/shows/812/days-of-our-lives",
+        "name": "Days of Our Lives",
+        "type": "Scripted",
+        "language": "English",
+        "genres": ["Drama", "Family", "Romance"],
+        "status": "Running",
+        "runtime": 60,
+        "premiered": "1965-12-09",
+        "officialSite": "http://www.nbc.com/days-of-our-lives",
+        "schedule": {
+          "time": "13:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        },
+        "rating": {
+          "average": 6.4
+        },
+        "weight": 95,
+        "network": {
+          "id": 1,
+          "name": "NBC",
+          "country": {
+            "name": "United States",
+            "code": "US",
+            "timezone": "America/New_York"
+          }
+        },
+        "webChannel": null,
+        "externals": {
+          "tvrage": 3256,
+          "thetvdb": 70366,
+          "imdb": "tt0058796"
+        },
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/87/218576.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/87/218576.jpg"
+        },
+        "summary": "<p><b>Days of our Lives</b> is set in the fictitious Midwestern town of Salem. The core families are the Bradys, the Hortons and the DiMeras, and the multi-layered storylines involve elements of romance, adventure, mystery, comedy and drama.</p>",
+        "updated": 1562604274,
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/shows/812"
+          },
+          "previousepisode": {
+            "href": "http://api.tvmaze.com/episodes/1676806"
+          },
+          "nextepisode": {
+            "href": "http://api.tvmaze.com/episodes/1676807"
+          }
+        }
+      },
+      "_links": {
+        "self": {
+          "href": "http://api.tvmaze.com/episodes/1676806"
+        }
+      }
+    },
+    {
+      "id": 1676816,
+      "url": "http://www.tvmaze.com/episodes/1676816/the-bold-and-the-beautiful-2019-07-08-ep-8128",
+      "name": "Ep. #8128",
+      "season": 2019,
+      "number": 131,
+      "airdate": "2019-07-08",
+      "airtime": "13:30",
+      "airstamp": "2019-07-08T17:30:00+00:00",
+      "runtime": 30,
+      "image": null,
+      "summary": null,
+      "show": {
+        "id": 806,
+        "url": "http://www.tvmaze.com/shows/806/the-bold-and-the-beautiful",
+        "name": "The Bold and the Beautiful",
+        "type": "Scripted",
+        "language": "English",
+        "genres": ["Drama", "Family", "Romance"],
+        "status": "Running",
+        "runtime": 30,
+        "premiered": "1987-03-23",
+        "officialSite": null,
+        "schedule": {
+          "time": "13:30",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        },
+        "rating": {
+          "average": null
+        },
+        "weight": 93,
+        "network": {
+          "id": 2,
+          "name": "CBS",
+          "country": {
+            "name": "United States",
+            "code": "US",
+            "timezone": "America/New_York"
+          }
+        },
+        "webChannel": null,
+        "externals": {
+          "tvrage": 5631,
+          "thetvdb": 79838,
+          "imdb": "tt0092325"
+        },
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/186/465953.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/186/465953.jpg"
+        },
+        "summary": "<p>They created a dynasty where passion rules, they are the Forresters, the first name in Fashion. <b>The Bold and the Beautiful</b>, a world of fashion, glamor and romance. A place where power, money and success are there for the taking in a city where dreams really do come true. Follow the lives and loves of the Forresters on <i>The Bold and the Beautiful</i>...</p>",
+        "updated": 1561945585,
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/shows/806"
+          },
+          "previousepisode": {
+            "href": "http://api.tvmaze.com/episodes/1676816"
+          },
+          "nextepisode": {
+            "href": "http://api.tvmaze.com/episodes/1676817"
+          }
+        }
+      },
+      "_links": {
+        "self": {
+          "href": "http://api.tvmaze.com/episodes/1676816"
+        }
+      }
+    },
+    {
+      "id": 1679241,
+      "url": "http://www.tvmaze.com/episodes/1679241/general-hospital-2019-07-08-ep-14339",
+      "name": "Ep. #14339",
+      "season": 2019,
+      "number": 130,
+      "airdate": "2019-07-08",
+      "airtime": "14:00",
+      "airstamp": "2019-07-08T18:00:00+00:00",
+      "runtime": 60,
+      "image": null,
+      "summary": null,
+      "show": {
+        "id": 4189,
+        "url": "http://www.tvmaze.com/shows/4189/general-hospital",
+        "name": "General Hospital",
+        "type": "Scripted",
+        "language": "English",
+        "genres": ["Drama", "Medical"],
+        "status": "Running",
+        "runtime": 60,
+        "premiered": "1963-04-01",
+        "officialSite": "http://abc.go.com/shows/general-hospital",
+        "schedule": {
+          "time": "14:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        },
+        "rating": {
+          "average": 5.8
+        },
+        "weight": 82,
+        "network": {
+          "id": 3,
+          "name": "ABC",
+          "country": {
+            "name": "United States",
+            "code": "US",
+            "timezone": "America/New_York"
+          }
+        },
+        "webChannel": null,
+        "externals": {
+          "tvrage": 3653,
+          "thetvdb": 75332,
+          "imdb": "tt0056758"
+        },
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/115/287759.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/115/287759.jpg"
+        },
+        "summary": "<p><b>General Hospital</b>, which celebrated its golden anniversary on April 1, 2013, continues its tradition of passion, intrigue and adventure that takes place in the fictional town of Port Charles in upstate New York. The glamour and excitement of those who have come to find their destinies in this familiar seaport town intertwine with the lives, loves and fortunes of beloved, well-known faces. As always, love, danger and mind blowing plot twists continue to abound on General Hospital with contemporary storylines and unforgettable characters.</p>",
+        "updated": 1562549176,
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/shows/4189"
+          },
+          "previousepisode": {
+            "href": "http://api.tvmaze.com/episodes/1679241"
+          },
+          "nextepisode": {
+            "href": "http://api.tvmaze.com/episodes/1679242"
+          }
+        }
+      },
+      "_links": {
+        "self": {
+          "href": "http://api.tvmaze.com/episodes/1679241"
+        }
+      }
+    },
+    {
+      "id": 1678723,
+      "url": "http://www.tvmaze.com/episodes/1678723/hot-bench-5x195-no-meeting-of-the-minds-pet-gang-destroys-apartment",
+      "name": "No Meeting of the Minds!; Pet Gang Destroys Apartment?!",
+      "season": 5,
+      "number": 195,
+      "airdate": "2019-07-08",
+      "airtime": "15:30",
+      "airstamp": "2019-07-08T19:30:00+00:00",
+      "runtime": 30,
+      "image": null,
+      "summary": null,
+      "show": {
+        "id": 15218,
+        "url": "http://www.tvmaze.com/shows/15218/hot-bench",
+        "name": "Hot Bench",
+        "type": "Reality",
+        "language": "English",
+        "genres": [],
+        "status": "Running",
+        "runtime": 30,
+        "premiered": "2014-09-15",
+        "officialSite": "http://www.hotbench.tv/",
+        "schedule": {
+          "time": "15:30",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        },
+        "rating": {
+          "average": null
+        },
+        "weight": 5,
+        "network": {
+          "id": 72,
+          "name": "Syndication",
+          "country": {
+            "name": "United States",
+            "code": "US",
+            "timezone": "America/New_York"
+          }
+        },
+        "webChannel": null,
+        "externals": {
+          "tvrage": null,
+          "thetvdb": 286153,
+          "imdb": "tt3854942"
+        },
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/51/129425.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/51/129425.jpg"
+        },
+        "summary": "<p>Three judges argue the merits of a case among themselves and render a verdict.</p>",
+        "updated": 1562409031,
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/shows/15218"
+          },
+          "previousepisode": {
+            "href": "http://api.tvmaze.com/episodes/1675963"
+          },
+          "nextepisode": {
+            "href": "http://api.tvmaze.com/episodes/1678723"
+          }
+        }
+      },
+      "_links": {
+        "self": {
+          "href": "http://api.tvmaze.com/episodes/1678723"
+        }
+      }
+    },
+    {
+      "id": 1663090,
+      "url": "http://www.tvmaze.com/episodes/1663090/naked-news-2019-07-08-2019-07-08",
+      "name": "2019-07-08",
+      "season": 2019,
+      "number": 161,
+      "airdate": "2019-07-08",
+      "airtime": "17:00",
+      "airstamp": "2019-07-08T21:00:00+00:00",
+      "runtime": 25,
+      "image": null,
+      "summary": null,
+      "show": {
+        "id": 32095,
+        "url": "http://www.tvmaze.com/shows/32095/naked-news",
+        "name": "Naked News",
+        "type": "News",
+        "language": "English",
+        "genres": ["Adult"],
+        "status": "Running",
+        "runtime": 25,
+        "premiered": "1999-12-13",
+        "officialSite": null,
+        "schedule": {
+          "time": "17:00",
+          "days": ["Monday"]
+        },
+        "rating": {
+          "average": 8.2
+        },
+        "weight": 94,
+        "network": {
+          "id": 1035,
+          "name": "Playboy TV",
+          "country": {
+            "name": "United States",
+            "code": "US",
+            "timezone": "America/New_York"
+          }
+        },
+        "webChannel": null,
+        "externals": {
+          "tvrage": null,
+          "thetvdb": 266718,
+          "imdb": "tt0249044"
+        },
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/128/321820.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/128/321820.jpg"
+        },
+        "summary": "<p><b>Naked News</b>, billing itself as \"the program with nothing to hide\", is a subscription website featuring a real television newscast. The show is prepared in Toronto and runs daily, with 25-minute episodes 6 days per week. The female anchors read the news fully nude or strip as they present their news segments. Naked News TV is its offshoot pay-per-view or subscription service. Naked News also aired briefly as a late night television series on Citytv Toronto.</p>",
+        "updated": 1559393082,
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/shows/32095"
+          },
+          "previousepisode": {
+            "href": "http://api.tvmaze.com/episodes/1663089"
+          },
+          "nextepisode": {
+            "href": "http://api.tvmaze.com/episodes/1663090"
+          }
+        }
+      },
+      "_links": {
+        "self": {
+          "href": "http://api.tvmaze.com/episodes/1663090"
+        }
+      }
+    },
+    {
+      "id": 1583968,
+      "url": "http://www.tvmaze.com/episodes/1583968/pbs-newshour-2019-07-08-july-8-2019",
+      "name": "July 8, 2019",
+      "season": 2019,
+      "number": 135,
+      "airdate": "2019-07-08",
+      "airtime": "18:00",
+      "airstamp": "2019-07-08T22:00:00+00:00",
+      "runtime": 60,
+      "image": null,
+      "summary": null,
+      "show": {
+        "id": 10563,
+        "url": "http://www.tvmaze.com/shows/10563/pbs-newshour",
+        "name": "PBS NewsHour",
+        "type": "News",
+        "language": "English",
+        "genres": [],
+        "status": "Running",
+        "runtime": 60,
+        "premiered": "1975-10-20",
+        "officialSite": "http://www.pbs.org/newshour/",
+        "schedule": {
+          "time": "18:00",
+          "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+        },
+        "rating": {
+          "average": null
+        },
+        "weight": 0,
+        "network": {
+          "id": 85,
+          "name": "PBS",
+          "country": {
+            "name": "United States",
+            "code": "US",
+            "timezone": "America/New_York"
+          }
+        },
+        "webChannel": null,
+        "externals": {
+          "tvrage": null,
+          "thetvdb": 81388,
+          "imdb": "tt0247880"
+        },
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/35/89115.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/35/89115.jpg"
+        },
+        "summary": "<p><b>PBS NewsHour</b> is the long running news magazine broadcast every weeknight on PBS. The show was created by veteran newsmen Robert MacNeil &amp; Jim Lehrer, and has been on the air since 1975. In 2009, the show, previously known as The NewsHour With Jim Lehrer, became PBS NewsHour. One of the major differences between network news and the PBS NewsHour is that because the show is publicly funded, there are no commercials. This allows the NewsHour to dedicate more time to comprehensive reporting.</p>",
+        "updated": 1546007353,
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/shows/10563"
+          },
+          "previousepisode": {
+            "href": "http://api.tvmaze.com/episodes/1583967"
+          },
+          "nextepisode": {
+            "href": "http://api.tvmaze.com/episodes/1583968"
+          }
+        }
+      },
+      "_links": {
+        "self": {
+          "href": "http://api.tvmaze.com/episodes/1583968"
+        }
+      }
+    },
+    {
+      "id": 1675521,
+      "url": "http://www.tvmaze.com/episodes/1675521/teen-titans-go-5x40-royal-jelly",
+      "name": "Royal Jelly",
+      "season": 5,
+      "number": 40,
+      "airdate": "2019-07-08",
+      "airtime": "18:00",
+      "airstamp": "2019-07-08T22:00:00+00:00",
+      "runtime": 15,
+      "image": null,
+      "summary": "<p>Bumblebee offers to help Robin with his leadership skills by teaching him how to act like a queen bee.</p>",
+      "show": {
+        "id": 706,
+        "url": "http://www.tvmaze.com/shows/706/teen-titans-go",
+        "name": "Teen Titans Go!",
+        "type": "Animation",
+        "language": "English",
+        "genres": ["Action", "Adventure", "Science-Fiction"],
+        "status": "Running",
+        "runtime": 15,
+        "premiered": "2013-04-23",
+        "officialSite": "http://www.cartoonnetwork.com/video/teen-titans-go/",
+        "schedule": {
+          "time": "18:00",
+          "days": ["Monday"]
+        },
+        "rating": {
+          "average": 7.2
+        },
+        "weight": 93,
+        "network": {
+          "id": 11,
+          "name": "Cartoon Network",
+          "country": {
+            "name": "United States",
+            "code": "US",
+            "timezone": "America/New_York"
+          }
+        },
+        "webChannel": null,
+        "externals": {
+          "tvrage": 31944,
+          "thetvdb": 266775,
+          "imdb": "tt2771780"
+        },
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/6/15007.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/6/15007.jpg"
+        },
+        "summary": "<p><b>Teen Titans Go!</b> is a character-driven comedy series focuses on the funny that happens in between saving the world and living together as teenagers without adult supervision. The comedic mayhem of the animated series is punctuated by pranks and the occasional need to fight crime, but it will also deal with the everyday issues of adolescence. With epic staring contests to decide who does the laundry, a series of quests and battles to construct the perfect sandwich or fighting crime in Jump City, one thing is for sure, these Titans will always be ready for an adventure inside the house and out.</p>",
+        "updated": 1561807887,
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/shows/706"
+          },
+          "previousepisode": {
+            "href": "http://api.tvmaze.com/episodes/1675520"
+          },
+          "nextepisode": {
+            "href": "http://api.tvmaze.com/episodes/1675521"
+          }
+        }
+      },
+      "_links": {
+        "self": {
+          "href": "http://api.tvmaze.com/episodes/1675521"
+        }
+      }
+    },
+    {
+      "id": 1676283,
+      "url": "http://www.tvmaze.com/episodes/1676283/mao-mao-heroes-of-pure-heart-1x03-no-shortcuts",
+      "name": "No Shortcuts",
+      "season": 1,
+      "number": 3,
+      "airdate": "2019-07-08",
+      "airtime": "18:10",
+      "airstamp": "2019-07-08T22:10:00+00:00",
+      "runtime": 11,
+      "image": null,
+      "summary": null,
+      "show": {
+        "id": 42261,
+        "url": "http://www.tvmaze.com/shows/42261/mao-mao-heroes-of-pure-heart",
+        "name": "Mao Mao: Heroes of Pure Heart",
+        "type": "Animation",
+        "language": "English",
+        "genres": ["Comedy", "Adventure", "Fantasy"],
+        "status": "Running",
+        "runtime": 11,
+        "premiered": "2019-07-01",
+        "officialSite": null,
+        "schedule": {
+          "time": "",
+          "days": ["Monday"]
+        },
+        "rating": {
+          "average": null
+        },
+        "weight": 93,
+        "network": {
+          "id": 11,
+          "name": "Cartoon Network",
+          "country": {
+            "name": "United States",
+            "code": "US",
+            "timezone": "America/New_York"
+          }
+        },
+        "webChannel": null,
+        "externals": {
+          "tvrage": null,
+          "thetvdb": 364343,
+          "imdb": null
+        },
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/203/508246.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/203/508246.jpg"
+        },
+        "summary": "<p>Mao Mao, Badgerclops and Adorabat are fearless warriors who protect the people of Pure Heart Valley from monsters, villains and all kinds of bad stuff. Led by King Snugglemagne, the Sweety Pies of Pure Heart are cute, cuddly and pretty much helpless. Luckily, they have valiant heroes like Mao Mao, Adorabat and Badgerclops to watch over them. He'll battle baddies like the Sky Pirates: Orangusnake, Ramaraffe, Boss Hosstrich and Rat-A-Rang, while learning to become a legend in his own time.</p>",
+        "updated": 1562044381,
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/shows/42261"
+          },
+          "previousepisode": {
+            "href": "http://api.tvmaze.com/episodes/1676282"
+          },
+          "nextepisode": {
+            "href": "http://api.tvmaze.com/episodes/1676283"
+          }
+        }
+      },
+      "_links": {
+        "self": {
+          "href": "http://api.tvmaze.com/episodes/1676283"
+        }
+      }
+    },
+    {
+      "id": 1676284,
+      "url": "http://www.tvmaze.com/episodes/1676284/mao-mao-heroes-of-pure-heart-1x04-ultraclops",
+      "name": "Ultraclops",
+      "season": 1,
+      "number": 4,
+      "airdate": "2019-07-08",
+      "airtime": "18:25",
+      "airstamp": "2019-07-08T22:25:00+00:00",
+      "runtime": 11,
+      "image": null,
+      "summary": null,
+      "show": {
+        "id": 42261,
+        "url": "http://www.tvmaze.com/shows/42261/mao-mao-heroes-of-pure-heart",
+        "name": "Mao Mao: Heroes of Pure Heart",
+        "type": "Animation",
+        "language": "English",
+        "genres": ["Comedy", "Adventure", "Fantasy"],
+        "status": "Running",
+        "runtime": 11,
+        "premiered": "2019-07-01",
+        "officialSite": null,
+        "schedule": {
+          "time": "",
+          "days": ["Monday"]
+        },
+        "rating": {
+          "average": null
+        },
+        "weight": 93,
+        "network": {
+          "id": 11,
+          "name": "Cartoon Network",
+          "country": {
+            "name": "United States",
+            "code": "US",
+            "timezone": "America/New_York"
+          }
+        },
+        "webChannel": null,
+        "externals": {
+          "tvrage": null,
+          "thetvdb": 364343,
+          "imdb": null
+        },
+        "image": {
+          "medium": "http://static.tvmaze.com/uploads/images/medium_portrait/203/508246.jpg",
+          "original": "http://static.tvmaze.com/uploads/images/original_untouched/203/508246.jpg"
+        },
+        "summary": "<p>Mao Mao, Badgerclops and Adorabat are fearless warriors who protect the people of Pure Heart Valley from monsters, villains and all kinds of bad stuff. Led by King Snugglemagne, the Sweety Pies of Pure Heart are cute, cuddly and pretty much helpless. Luckily, they have valiant heroes like Mao Mao, Adorabat and Badgerclops to watch over them. He'll battle baddies like the Sky Pirates: Orangusnake, Ramaraffe, Boss Hosstrich and Rat-A-Rang, while learning to become a legend in his own time.</p>",
+        "updated": 1562044381,
+        "_links": {
+          "self": {
+            "href": "http://api.tvmaze.com/shows/42261"
+          },
+          "previousepisode": {
+            "href": "http://api.tvmaze.com/episodes/1676282"
+          },
+          "nextepisode": {
+            "href": "http://api.tvmaze.com/episodes/1676283"
+          }
+        }
+      },
+      "_links": {
+        "self": {
+          "href": "http://api.tvmaze.com/episodes/1676284"
+        }
+      }
+    }
+  ]
+}
