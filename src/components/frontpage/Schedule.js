@@ -1,28 +1,35 @@
 import React, { Component } from "react";
-//import { Card } from "react-bootstrap";
-import Filter from "../../filter/index";
-//import Slider from "react-slick";
-//import testdata from "./test.json";
 import placeholderImg from "../../img/noposter.png";
 import { withRouter } from "react-router-dom";
 import Rating from "../showdetail/rating";
+import ShowInfoBox from "./showinfobox";
 
 class Schedule extends Component {
   state = {
-    load: false,
-    shows: null,
     scroll: 0,
     maxwidth: null
   };
+  setShowId = () => {
+    return Math.floor(Math.random() * 100000);
+  };
+
   setShows = () => {
-    if (this.state.load) {
-      return this.state.shows.map(item => {
+    if (this.props.shows) {
+      return this.props.shows.map(item => {
+        let showid = this.setShowId();
         return (
           <div
             className="showcard"
             key={item.id}
+            id={showid}
             onClick={() => {
               this.handleDetail(item);
+            }}
+            onMouseOver={() => {
+              this.handleDetailOnMouseOver(showid);
+            }}
+            onMouseOut={() => {
+              this.handleDetailOnMouseOut(showid);
             }}
           >
             <img
@@ -31,20 +38,27 @@ class Schedule extends Component {
             />
             <h4>{item.show.name}</h4>
             <p>{item.name}</p>
-
             <Rating rating={item.show.rating.average} />
-            <div className="schedule">
-              To day at: {Filter.ReturnTime(item.airstamp)}
-            </div>
+            <div className="schedule">{item.airtime}</div>
+            <ShowInfoBox show={item} />
           </div>
         );
       });
+    } else {
+      return null;
     }
   };
   btnNext = () => {
-    this.setState({
-      scroll: this.state.scroll - this.state.maxwidth
-    });
+    let totallength = this.props.shows.length * 220 - this.state.maxwidth;
+    if (totallength + this.state.scroll > 1) {
+      this.setState({
+        scroll: this.state.scroll - this.state.maxwidth
+      });
+    } else {
+      this.setState({
+        scroll: 0
+      });
+    }
   };
   btnPreviuos = () => {
     if (this.state.scroll < 0) {
@@ -61,29 +75,48 @@ class Schedule extends Component {
     console.log(obj);
     //this.props.history.push("/showepisode");
   };
+  handleDetailOnMouseOver = showid => {
+    let box = document.getElementById(showid);
+    let info = box.querySelector(".showInfoBox");
+    let leftright = box.offsetLeft / this.state.maxwidth;
+
+    if (Math.floor(leftright * 1000) > 500) {
+      info.style.left = "-440px";
+      info.classList.replace("showInfoBoxLeft", "showInfoBoxRight");
+    } else {
+      info.style.left = "220px";
+      info.classList.replace("showInfoBoxRight", "showInfoBoxLeft");
+    }
+
+    info.style.display = "block";
+  };
+
+  handleDetailOnMouseOut = showid => {
+    let box = document.getElementById(showid);
+    box.querySelector(".showInfoBox").style.display = "none";
+  };
+
+  componentDidMount = () => {
+    let y = Math.floor(
+      document.getElementsByClassName("shows")[0].clientWidth / 222
+    );
+    let x = y * 220;
+
+    this.setState({
+      maxwidth: x
+    });
+  };
+  componentWillUnmount = () => {
+    console.log(this.state);
+  };
+  /*
   componentDidUpdate = (prevProps, prevState, snapshot) => {
-    if (this.state.shows !== prevState.shows) {
-      console.log(this.state);
-      this.setShows();
-      this.props.handleNetworks(this.state.shows);
+    if (this.state.load !== prevState.load) {
+      //this.setPopShow();
+      //this.setCrimeShow();
     }
   };
-  componentDidMount = () => {
-    fetch(
-      this.props.endpoint + "schedule?country=us&date=" + Filter.CurrentDate()
-    )
-      .then(response => response.json())
-      .then(results => {
-        this.setState({
-          load: true,
-          shows: results,
-          maxwidth: document.getElementsByClassName("holder")[0].clientWidth
-        });
-      })
-
-      .catch(error => this.setState({ load: false }));
-  };
-
+*/
   render() {
     return (
       <div className="navshows">

@@ -36,7 +36,9 @@ class App extends Component {
                   />
                 </Col>
                 <Col lg={3}>
-                  <div className="demo2">It's just a laptop demo</div>
+                  <div className="demo2 d-none d-lg-block">
+                    It's just a laptop demo
+                  </div>
                 </Col>
               </Row>
             </Container>
