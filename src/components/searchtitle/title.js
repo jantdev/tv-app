@@ -1,22 +1,17 @@
 import { InputGroup, FormControl, ListGroup } from "react-bootstrap";
 import { withRouter } from "react-router-dom";
 import React, { Component } from "react";
+import Api from "../../api/api";
 
 class SearchTitle extends Component {
   state = { result: [] };
 
   SearchTitleQuery = e => {
     if (e.target.value.length > 2) {
-      fetch(this.props.endpoint + "/search/shows?q=:" + e.target.value)
-        .then(response => response.json())
-        .then(results => {
-          this.setState({
-            result: results
-          });
+      Api.searchTitle(e.target.value).then(results => {
+        this.setState({
+          result: results
         });
-    } else {
-      this.setState({
-        result: []
       });
     }
   };

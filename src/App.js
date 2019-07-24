@@ -42,18 +42,20 @@ class App extends Component {
                 </Col>
               </Row>
             </Container>
-            <Container fluid>
-              <Row className="_navbar">
-                <Col>
-                  <Navbar expand="lg" className="_navbarbg">
-                    <Navbar.Brand href="#">
-                      <img src={logosm} alt="logo" className="logosm" />
-                      <span className="logotext">TV-APP</span>
-                    </Navbar.Brand>
-                  </Navbar>
-                </Col>
-              </Row>
-            </Container>
+            <div className="navbarbg">
+              <Container fluid>
+                <Row className="navbar">
+                  <Col>
+                    <Navbar expand="lg">
+                      <Navbar.Brand href="/">
+                        <img src={logosm} alt="logo" className="logosm" />
+                        <span className="logotext">TV-APP</span>
+                      </Navbar.Brand>
+                    </Navbar>
+                  </Col>
+                </Row>
+              </Container>
+            </div>
           </header>
           <section>
             <Switch>
@@ -71,7 +73,7 @@ class App extends Component {
               <Route exact path="/showdetail/:id" component={ShowDetail} />
               <Route
                 exact
-                path="/showepisode"
+                path="/showepisode/:id"
                 render={props => (
                   <ShowEpisode {...props} episode={this.state.selectedShow} />
                 )}
@@ -80,6 +82,32 @@ class App extends Component {
             </Switch>
           </section>
         </BrowserRouter>
+        <footer>
+          <div className="footer">
+            <Container fluid>
+              <Row>
+                <Col>
+                  <Row className="mb-3">
+                    <Col lg={2}>
+                      <img src={logosm} alt="logo" />
+                    </Col>
+
+                    <Col>
+                      <span className="logotext">TV-APP</span>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col>
+                      <div>It's just a laptop demo</div>
+                    </Col>
+                  </Row>
+                </Col>
+                <Col>2</Col>
+                <Col>3</Col>
+              </Row>
+            </Container>
+          </div>
+        </footer>
       </Fragment>
     );
   }

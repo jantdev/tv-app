@@ -73,7 +73,7 @@ class Schedule extends Component {
   handleDetail = obj => {
     this.props.handleSelectShow(obj);
     console.log(obj);
-    //this.props.history.push("/showepisode");
+    this.props.history.push("/showepisode/" + obj.show.id + "+" + obj.id);
   };
   handleDetailOnMouseOver = showid => {
     let box = document.getElementById(showid);
@@ -106,17 +106,7 @@ class Schedule extends Component {
       maxwidth: x
     });
   };
-  componentWillUnmount = () => {
-    console.log(this.state);
-  };
-  /*
-  componentDidUpdate = (prevProps, prevState, snapshot) => {
-    if (this.state.load !== prevState.load) {
-      //this.setPopShow();
-      //this.setCrimeShow();
-    }
-  };
-*/
+
   render() {
     return (
       <div className="navshows">

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Scheudule from "./Schedule";
-import Api from "../../api/api";
+import Filter from "../../filter/index";
 
 class Frontpage extends Component {
   state = {
@@ -69,13 +69,25 @@ class Frontpage extends Component {
     }
   };
 
+  componentDidUpdate = (prevProps, prevState, snapshot) => {
+    if (this.state.load !== prevState.load) {
+      //this.setPopShow();
+      //this.setCrimeShow();
+    }
+  };
+
   componentDidMount = () => {
-    Api.ToDaysShow().then(o => {
-      this.setState({
-        load: true,
-        shows: o
-      });
-    });
+    fetch(
+      this.props.endpoint + "schedule?country=us&date=" + Filter.CurrentDate()
+    )
+      .then(response => response.json())
+      .then(results => {
+        this.setState({
+          load: true,
+          shows: results
+        });
+      })
+      .catch(error => this.setState({ load: false }));
   };
 
   render() {

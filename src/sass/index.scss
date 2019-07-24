@@ -3,6 +3,7 @@
 $maincolor: #00a3d9;
 $lightmain: lighten($maincolor, 50%);
 $altlightmain: lighten($maincolor, 20%);
+$darkmain: darken($maincolor, 30%);
 $info: #fe7900;
 $text: #333;
 $mainwhite: #fff;
@@ -11,16 +12,15 @@ $mainwhite: #fff;
   width: 32px;
   height: 32px;
 }
-
-._navbar {
-  ._navbarbg {
-    background: $maincolor;
-  }
-  .logotext {
-    margin-left: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    color: $mainwhite;
+.navbarbg {
+  background: $maincolor;
+  .navbar {
+    .logotext {
+      margin-left: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      color: $mainwhite;
+    }
   }
 }
 
@@ -149,7 +149,7 @@ $mainwhite: #fff;
   position: absolute;
   width: 423px;
   height: 450px;
-  background: #333;
+  background: $darkmain;
   top: 1px;
   z-index: 100;
   color: #ff8;
@@ -165,7 +165,7 @@ $mainwhite: #fff;
     left: -30px;
     z-index: 1;
     border: solid 15px transparent;
-    border-right-color: #333;
+    border-right-color: $darkmain;
   }
 }
 
@@ -179,4 +179,38 @@ $mainwhite: #fff;
     border: solid 15px transparent;
     border-left-color: #333;
   }
+}
+
+.shownav {
+  list-style-type: none;
+  display: flex;
+  padding: 0px 10px;
+  background: #ddd;
+  li {
+    margin-right: 10px;
+    color: #333;
+    padding: 10px;
+  }
+  .active {
+    background: #333;
+    color: #fff;
+  }
+}
+.cast {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(202px, 1fr));
+  grid-column-gap: 20px;
+  .person {
+    img {
+      margin-right: 10px;
+    }
+  }
+}
+
+.footer {
+  height: 400px;
+  background: $darkmain;
+  padding-top: 30px;
+  margin-top: 30px;
+  color: $mainwhite;
 }
