@@ -1,14 +1,13 @@
 import React, { Component } from "react";
+import { Button } from "react-bootstrap";
 import Cast from "./cast";
 import Episodes from "./episodes";
-import Main from "./main";
 
 class ShowNav extends Component {
   state = {
     show: this.props.show,
     activeSubject: 0,
     subjects: [
-      { name: "Main", active: "active", visible: "block" },
       { name: "Episodes", active: "inactive", visible: "none" },
       { name: "Cast", active: "inactive", visible: "none" }
     ],
@@ -42,7 +41,8 @@ class ShowNav extends Component {
     return this.state.subjects.map((item, index) => {
       return (
         <li key={"sub" + index}>
-          <button
+          <Button
+            variant="secondary"
             onClick={() => {
               this.handleClick(index);
             }}
@@ -50,7 +50,7 @@ class ShowNav extends Component {
             className={this.ListnerToSubjectsNav(index)}
           >
             {item.name}
-          </button>
+          </Button>
         </li>
       );
     });
@@ -58,7 +58,6 @@ class ShowNav extends Component {
 
   componentDidMount = () => {
     if (this.props.show) {
-      console.log(this.props);
       fetch("http://api.tvmaze.com/shows/" + this.state.show.show.id + "/cast")
         .then(response => response.json())
         .then(results => {
@@ -73,12 +72,13 @@ class ShowNav extends Component {
     return (
       <div className="showalldata">
         <ul className="shownav">{this.setupSubjects()}</ul>
-        <Main show={this.props.show} style={this.ListnerToSubjectsVisible(0)} />
+
         <Episodes
-          style={this.ListnerToSubjectsVisible(1)}
+          style={this.ListnerToSubjectsVisible(0)}
           allepisodes={this.props.allepisodes}
+          show={this.props.show}
         />
-        <Cast style={this.ListnerToSubjectsVisible(2)} cast={this.props.cast} />
+        <Cast style={this.ListnerToSubjectsVisible(1)} cast={this.props.cast} />
       </div>
     );
   }

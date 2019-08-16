@@ -39,7 +39,8 @@ class SearchTitle extends Component {
                 this.handleSelectShow(item.show);
               }}
             >
-              {item.show.name}
+              {item.show.name}{" "}
+              {item.show.premiered ? item.show.premiered.substring(0, 4) : ""}
             </ListGroup.Item>
           ))}
         </ListGroup>

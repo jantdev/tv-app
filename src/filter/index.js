@@ -17,8 +17,22 @@ const Filter = {
     }
   },
   setId() {
-    let salt = Math.floor(Math.random() * 1000000);
+    let salt = Math.floor(Math.random() * 10000000);
     return Math.floor(Math.random() * salt);
+  },
+  setUId(id) {
+    return Math.floor(Math.random() * id * 10000000);
+  },
+  returnTimeFormat(num) {
+    num = String(num);
+
+    if (num.length < 4) {
+      num = "0" + num;
+    }
+    return num.substring(0, 2) + ":" + num.substring(2, 4);
+  },
+  HourToNum(hour) {
+    return Number(String(hour).replace(":", ""));
   }
 };
 export default Filter;

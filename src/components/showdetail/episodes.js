@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { Table } from "react-bootstrap";
 import Filter from "../../filter/index";
-//import { Link } from "react-router-dom";
+
 let Season = 0;
 
 const fillData = props => {
@@ -30,7 +30,11 @@ const fillData = props => {
               {Filter.AddZero(item.season)}x{Filter.AddZero(item.number)}
             </td>
             <td>{item.airdate}</td>
-            <td>{item.name}</td>
+            <td>
+              <a href={"/showepisode/" + props.show.id + "+" + item.id}>
+                {item.name}
+              </a>
+            </td>
           </tr>
         );
       }

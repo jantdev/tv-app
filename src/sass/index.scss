@@ -7,20 +7,28 @@ $darkmain: darken($maincolor, 30%);
 $info: #fe7900;
 $text: #333;
 $mainwhite: #fff;
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+}
 
+.content {
+  min-height: calc(100vh - 70px);
+}
 .logosm {
   width: 32px;
   height: 32px;
 }
-.navbarbg {
+.bg-navbarbg {
   background: $maincolor;
-  .navbar {
-    .logotext {
-      margin-left: 10px;
-      font-size: 16px;
-      font-weight: bold;
-      color: $mainwhite;
-    }
+  .logotext {
+    color: $mainwhite;
+    margin-left: 20px;
+  }
+  .navbar-light {
+    color: $mainwhite;
   }
 }
 
@@ -119,7 +127,7 @@ $mainwhite: #fff;
     p {
       padding-left: 5px;
     }
-    span {
+    .rating {
       position: absolute;
       display: inline-block;
       line-height: 48px;
@@ -141,6 +149,13 @@ $mainwhite: #fff;
       padding: 10px 0px 10px 10px;
       width: 202px;
       color: $text;
+      .network {
+        position: relative;
+        img {
+          width: 16px;
+          height: 11px;
+        }
+      }
     }
   }
 }
@@ -201,8 +216,32 @@ $mainwhite: #fff;
   grid-template-columns: repeat(auto-fill, minmax(202px, 1fr));
   grid-column-gap: 20px;
   .person {
-    img {
-      margin-right: 10px;
+    cursor: pointer;
+  }
+  .detailperson {
+    background: #333;
+    position: absolute;
+    overflow: hidden;
+    z-index: 1000;
+  }
+}
+.personShow {
+  .personholder {
+    position: fixed; /* Stay in place */
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+    overflow: auto;
+    .personinner {
+      margin-top: 100px;
+      color: $mainwhite;
+      h4 {
+      }
+      img {
+        max-width: 500px;
+      }
     }
   }
 }
@@ -213,4 +252,49 @@ $mainwhite: #fff;
   padding-top: 30px;
   margin-top: 30px;
   color: $mainwhite;
+}
+.todays {
+  border-bottom: 1px solid #e74809;
+  border-right: 1px solid #e74809;
+}
+
+.setgrid {
+  display: grid;
+  grid-template-columns: 90px repeat(12, 1fr);
+  background: #ff8;
+  color: #333;
+  border-top: 1px solid #e74809;
+  div:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    border-right: 1px solid #e74809;
+  }
+
+  div {
+    text-align: center;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 50px;
+    line-height: 50px;
+
+    .timenav {
+      margin: 0px;
+      padding: 0px 16px;
+      border: 0px;
+      background: $maincolor;
+      color: $mainwhite;
+    }
+  }
+}
+.time {
+  div {
+    border-right: 1px solid #e74809;
+  }
+  div:last-child {
+    border-right: 0px;
+  }
+  .timenav {
+  }
 }

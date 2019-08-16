@@ -15,9 +15,10 @@ const loadJson = url => {
     }
   });
 };
+
 const Api = {
   url: "http://api.tvmaze.com/",
-
+  imgFlagUrl: "https://static.tvmaze.com/intvendor/flags/|country|.png",
   ToDaysShow() {
     return loadJson(
       this.url + "schedule?country=us&date=" + Filter.CurrentDate()

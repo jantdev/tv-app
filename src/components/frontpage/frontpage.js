@@ -29,7 +29,6 @@ class Frontpage extends Component {
         return null;
       });
 
-      console.log(r);
       return r;
     }
   };

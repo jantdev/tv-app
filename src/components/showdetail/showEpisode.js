@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import ShowInfo from "./showinfo";
+import ShowInfo from "./showEpisodeInfo";
 import placeholderImg from "../../img/noposter.png";
 import ShowNav from "./shownav";
 import Api from "../../api/api";
@@ -49,25 +49,25 @@ class ShowEpisode extends Component {
   };
   setupEpisode = () => {
     if (this.state.episode) {
-      console.log(this.state);
       const ep = this.state.episode[0];
+      document.title = ep.name;
       return (
-        <Container>
+        <Container fluid>
           <Row>
             <Col>
               <h2>{ep.name}</h2>
             </Col>
           </Row>
           <Row className="mt-4">
-            <Col lg={3} md={4} sm={12} className="episodeimage">
+            <Col lg={5} md={12} sm={12} className="mb-4">
               <img
                 src={ep.image ? ep.image.medium : placeholderImg}
                 alt={ep.name}
               />
             </Col>
             <Col
-              lg={9}
-              md={8}
+              lg={7}
+              md={12}
               sm={12}
               dangerouslySetInnerHTML={{
                 __html: ep.summary ? ep.summary : this.state.summary
@@ -86,7 +86,7 @@ class ShowEpisode extends Component {
             {this.setupEpisode()}
           </Col>
           <Col lg={4} md={4} sm={12} className="mt-5">
-            <ShowInfo showobj={this.state.episode} />
+            <ShowInfo episodes={this.state.episode} show={this.state.show} />
           </Col>
         </Row>
 

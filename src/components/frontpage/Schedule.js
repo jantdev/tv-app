@@ -3,7 +3,7 @@ import placeholderImg from "../../img/noposter.png";
 import { withRouter } from "react-router-dom";
 import Rating from "../showdetail/rating";
 import ShowInfoBox from "./showinfobox";
-
+import Network from "../showdetail/showNetwork";
 class Schedule extends Component {
   state = {
     scroll: 0,
@@ -39,7 +39,9 @@ class Schedule extends Component {
             <h4>{item.show.name}</h4>
             <p>{item.name}</p>
             <Rating rating={item.show.rating.average} />
-            <div className="schedule">{item.airtime}</div>
+            <div className="schedule">
+              {item.airtime} <Network network={item.show.network} />
+            </div>
             <ShowInfoBox show={item} />
           </div>
         );
