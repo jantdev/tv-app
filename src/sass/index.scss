@@ -252,6 +252,10 @@ body {
   padding-top: 30px;
   margin-top: 30px;
   color: $mainwhite;
+  .link {
+    text-decoration: none;
+    color: $mainwhite;
+  }
 }
 .todays {
   border-bottom: 1px solid #e74809;
@@ -296,5 +300,25 @@ body {
     border-right: 0px;
   }
   .timenav {
+  }
+}
+
+.programtime {
+  background: $lightmain;
+}
+
+.cellholder {
+  display: grid;
+  grid-template-columns: 110px auto;
+  .showepisode {
+    h4 {
+      font-size: 1rem;
+
+      margin: 0px;
+      padding: 0px;
+    }
+    p {
+      margin: 0px;
+    }
   }
 }

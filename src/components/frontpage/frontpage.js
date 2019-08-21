@@ -2,72 +2,37 @@ import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Scheudule from "./Schedule";
 import Api from "../../api/api";
-
+import Category from "../searchtitle/category";
+import Program from "./Scheduletonight";
 class Frontpage extends Component {
   state = {
     load: false,
-    shows: null
+    shows: null,
+    showsByCategory: null,
+    displayShowsByCategory: "none"
   };
   frontpageSelectShow = o => {
     this.props.handleSelectShow(o);
   };
 
+  frontpageShowByCategory = c => {
+    this.setState({ showsByCategory: c, displayShowsByCategory: "block" });
+  };
   setPopShow = () => {
     return this.state.shows;
   };
-  setCrimeShow = () => {
-    if (this.state.load) {
-      const t = this.state.shows;
-      const r = [];
-      t.filter(o => {
-        o.show.genres.filter(f => {
-          if (f === "Crime") {
-            r.push(o);
-          }
-          return null;
-        });
-        return null;
-      });
-
-      return r;
-    }
-  };
-  setDramaShow = () => {
-    if (this.state.load) {
-      const t = this.state.shows;
-      const r = [];
-      t.filter(o => {
-        o.show.genres.filter(f => {
-          if (f === "Drama") {
-            r.push(o);
-          }
-          return null;
-        });
-        return null;
-      });
-
-      return r;
-    }
+  setCatShow = () => {
+    return this.state.showsByCategory;
   };
 
-  setActionShow = () => {
-    if (this.state.load) {
-      const t = this.state.shows;
-      const r = [];
-      t.filter(o => {
-        o.show.genres.filter(f => {
-          if (f === "Action") {
-            r.push(o);
-          }
-          return null;
-        });
-        return null;
-      });
+  setCurrenDate = () => {
+    const d = new Date();
 
-      return r;
-    }
+    let utc = d.getTime() + d.getTimezoneOffset() * 60000;
+    let nd = new Date(utc + 3600000 * -7);
+
+    return nd.toDateString().replace(" " + d.getFullYear(), "");
   };
-
   componentDidMount = () => {
     Api.ToDaysShow().then(o => {
       this.setState({
@@ -81,42 +46,50 @@ class Frontpage extends Component {
     return (
       <Container className="mt-2 frontpage" fluid>
         <Row>
-          <Col>
-            <h2>Popular shows airing today</h2>
+          <Col lg={8}>
+            <Row>
+              <Col>
+                <h2>Popular shows airing today</h2>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <Scheudule
+                  shows={this.setPopShow()}
+                  handleSelectShow={this.frontpageSelectShow}
+                />
+              </Col>
+            </Row>
+
+            <Row className="mt-4 ">
+              <Col>
+                <h2>Select shows by Category</h2>
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <Category
+                  shows={this.setPopShow()}
+                  handleShowByCategory={this.frontpageShowByCategory}
+                />
+              </Col>
+            </Row>
+            <Row style={{ display: this.state.displayShowsByCategory }}>
+              <Col>
+                <Scheudule
+                  shows={this.setCatShow()}
+                  handleSelectShow={this.frontpageSelectShow}
+                />
+              </Col>
+            </Row>
           </Col>
-        </Row>
-        <Row>
-          <Col>
-            <Scheudule
-              shows={this.setPopShow()}
-              handleSelectShow={this.frontpageSelectShow}
-            />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <h2>Todays Drama</h2>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <Scheudule
-              shows={this.setDramaShow()}
-              handleSelectShow={this.frontpageSelectShow}
-            />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <h2>Todays Action</h2>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <Scheudule
-              shows={this.setActionShow()}
-              handleSelectShow={this.frontpageSelectShow}
-            />
+          <Col lg={4}>
+            <Row>
+              <Col>
+                <h2>Schedule for {this.setCurrenDate()}</h2>
+              </Col>
+            </Row>
+            <Program shows={this.setPopShow()} />
           </Col>
         </Row>
       </Container>

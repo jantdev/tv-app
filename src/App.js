@@ -1,19 +1,19 @@
 import React, { Component, Fragment } from "react";
 import "./sass/index.scss";
-import { Container, Row, Col, Navbar, Nav } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import SearchTitle from "./components/searchtitle/title";
 import FrontPage from "./components/frontpage/frontpage";
 import ShowDetail from "./components/showdetail/showdetail";
 import { Route, BrowserRouter, Switch } from "react-router-dom";
 import NotFound from "./api/notfound";
-import logosm from "./img/logosm.png";
 import ShowEpisode from "./components/showdetail/showEpisode";
 import Timeline from "./components/timeline/today";
 import Navigation from "./components/nav/navigation";
+import Footer from "./components/footer/footer";
+import Network from "./components/network/network";
 
 class App extends Component {
   state = {
-    url: "http://api.tvmaze.com/",
     selectedShow: null
   };
   _SetShow = value => {
@@ -45,18 +45,6 @@ class App extends Component {
                 </Row>
               </Container>
               <Navigation />
-              <Navbar bg="navbarbg" variant="dark" expand="lg">
-                <Navbar.Brand href="/">
-                  <img src={logosm} alt="logo" className="logosm" />
-                  <span className="logotext">TV-APP</span>
-                </Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                  <Nav className="mr-auto">
-                    <Nav.Link href="/timeline/">Timeline</Nav.Link>
-                  </Nav>
-                </Navbar.Collapse>
-              </Navbar>
             </header>
             <section>
               <Switch>
@@ -76,36 +64,22 @@ class App extends Component {
                   )}
                 />
                 <Route path="/timeline/" component={Timeline} />
+
+                <Route
+                  exact
+                  path="/network/:id"
+                  render={props => (
+                    <Network {...props} network={this.state.selectedNetwork} />
+                  )}
+                />
+
                 <Route component={NotFound} />
               </Switch>
             </section>
           </div>
         </BrowserRouter>
         <footer>
-          <div className="footer">
-            <Container fluid>
-              <Row>
-                <Col>
-                  <Row className="mb-3">
-                    <Col lg={2}>
-                      <img src={logosm} alt="logo" />
-                    </Col>
-
-                    <Col>
-                      <span className="logotext">TV-APP</span>
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col>
-                      <div>It's just a laptop demo</div>
-                    </Col>
-                  </Row>
-                </Col>
-                <Col>2</Col>
-                <Col>3</Col>
-              </Row>
-            </Container>
-          </div>
+          <Footer />
         </footer>
       </Fragment>
     );

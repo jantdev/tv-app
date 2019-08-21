@@ -74,7 +74,7 @@ class Schedule extends Component {
   };
   handleDetail = obj => {
     this.props.handleSelectShow(obj);
-    console.log(obj);
+
     this.props.history.push("/showepisode/" + obj.show.id + "+" + obj.id);
   };
   handleDetailOnMouseOver = showid => {
