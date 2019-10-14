@@ -14,12 +14,15 @@ import Network from "./components/network/network";
 
 class App extends Component {
   state = {
-    selectedShow: null
+    selectedShow: null,
+    selectedNetwork: null
   };
   _SetShow = value => {
     this.setState({ selectedShow: value });
   };
-
+  _SetNetwork = value => {
+    this.setState({ selectedNetwork: value });
+  };
   render() {
     return (
       <Fragment>
@@ -45,6 +48,9 @@ class App extends Component {
                 </Row>
               </Container>
               <Navigation />
+              <a name="top" href="/" className="topanchor">
+                top of page
+              </a>
             </header>
             <section>
               <Switch>
@@ -52,7 +58,11 @@ class App extends Component {
                   exact
                   path="/"
                   render={props => (
-                    <FrontPage {...props} handleSelectShow={this._SetShow} />
+                    <FrontPage
+                      {...props}
+                      handleSelectShow={this._SetShow}
+                      handleSelectedNetwork={this._SetNetwork}
+                    />
                   )}
                 />
                 <Route path="/showdetail/:id" component={ShowDetail} />

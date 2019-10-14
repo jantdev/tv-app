@@ -8,7 +8,7 @@ class ShowNav extends Component {
     show: this.props.show,
     activeSubject: 0,
     subjects: [
-      { name: "Episodes", active: "inactive", visible: "none" },
+      { name: "Episodes", active: "active", visible: "block" },
       { name: "Cast", active: "inactive", visible: "none" }
     ],
     cast: null,

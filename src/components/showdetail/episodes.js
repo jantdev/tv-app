@@ -48,6 +48,9 @@ const Episodes = props => {
       <Table striped bordered hover>
         <tbody>{fillData(props)}</tbody>
       </Table>
+      <a href="#top" className="toTopOfPageLink">
+        Back to top of page
+      </a>
     </div>
   );
 };

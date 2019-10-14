@@ -12,7 +12,7 @@ class Timeline extends Component {
   test = () => {
     let t = [];
 
-    for (let x = 1; x < 14; x++) {
+    for (let x = -1; x < 12; x++) {
       t.push(<div key={"test" + x}>{x}</div>);
     }
     return t;
@@ -21,7 +21,7 @@ class Timeline extends Component {
   zxc = () => {
     if (this.state.network) {
       return (
-        <div className="setgrid" key={"zxc"}>
+        <div className="setgrid" key={"zxc" + Math.round(Math.random() * 1000)}>
           {this.test()}
         </div>
       );
@@ -115,6 +115,7 @@ class Timeline extends Component {
             currentStartTime={this.state.currentStartTime}
             network={this.state.network}
           />
+          {this.zxc()}
         </div>
       </div>
     );

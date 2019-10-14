@@ -17,6 +17,9 @@ const setTimer = props => {
     );
   });
 };
+const selectedNetwork = network => {
+  console.log(network);
+};
 
 const getList = (props, time) => {
   if (props.shows) {
@@ -31,11 +34,20 @@ const getList = (props, time) => {
               <div className="timernetwork">
                 {item.airtime}
                 <br />
-                <NetworkLink network={item.show.network} />
+                <NetworkLink
+                  network={item.show.network}
+                  handleNetwork={selectedNetwork}
+                />
               </div>
               <div className="showepisode">
-                <h4>{item.show.name}</h4>
-                <p>{item.name}</p>
+                <h4>
+                  <a href={"/showdetail/" + item.show.id}>{item.show.name}</a>
+                </h4>
+                <p>
+                  <a href={"/showepisode/" + item.show.id + "+" + item.id}>
+                    {item.name}
+                  </a>
+                </p>
               </div>
             </div>
           </ListGroup.Item>

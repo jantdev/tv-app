@@ -7,6 +7,7 @@ $darkmain: darken($maincolor, 30%);
 $info: #fe7900;
 $text: #333;
 $mainwhite: #fff;
+$linkcolor: #007bff;
 html,
 body {
   width: 100%;
@@ -291,6 +292,27 @@ body {
       color: $mainwhite;
     }
   }
+  .cell {
+    border-left: 1px solid #e74809;
+  }
+  .cell0 {
+    grid-column-start: 2;
+  }
+  .cell30 {
+    grid-column-start: 4;
+  }
+  .cell100 {
+    grid-column-start: 6;
+  }
+  .cell130 {
+    grid-column-start: 8;
+  }
+  .cell200 {
+    grid-column-start: 10;
+  }
+  .cell230 {
+    grid-column-start: 12;
+  }
 }
 .time {
   div {
@@ -320,5 +342,26 @@ body {
     p {
       margin: 0px;
     }
+  }
+}
+
+.networklink {
+  margin: 0px;
+  padding: 0px;
+  text-align: left;
+}
+
+.topanchor {
+  visibility: hidden;
+}
+
+.toTopOfPageLink {
+  border: 1px solid #00a3d9;
+  background: #007bff;
+  padding: 6px 15px;
+  color: $mainwhite;
+  &:hover {
+    color: $mainwhite;
+    text-decoration: none;
   }
 }

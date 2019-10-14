@@ -3,7 +3,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import Scheudule from "./Schedule";
 import Api from "../../api/api";
 import Category from "../searchtitle/category";
-import Program from "./Scheduletonight";
+import Program from "./program";
+
 class Frontpage extends Component {
   state = {
     load: false,
@@ -17,6 +18,11 @@ class Frontpage extends Component {
 
   frontpageShowByCategory = c => {
     this.setState({ showsByCategory: c, displayShowsByCategory: "block" });
+  };
+
+  frontpageSelectNetwork = network => {
+    this.props.handleSelectedNetwork(network);
+    this.props.history.push("/network/" + network.id);
   };
   setPopShow = () => {
     return this.state.shows;
@@ -89,7 +95,11 @@ class Frontpage extends Component {
                 <h2>Schedule for {this.setCurrenDate()}</h2>
               </Col>
             </Row>
-            <Program shows={this.setPopShow()} />
+            <Program
+              className="program"
+              shows={this.setPopShow()}
+              handleSelectNetwork={this.frontpageSelectNetwork}
+            />
           </Col>
         </Row>
       </Container>
