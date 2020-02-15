@@ -2,13 +2,16 @@ import React, { Component } from "react";
 import Filter from "../../filter/index";
 import placeholderImg from "../../img/noposter.png";
 import { Container, Row, Col, Button } from "react-bootstrap";
+import Api from "../../api/api";
+
 class Cast extends Component {
   constructor(props) {
     super(props);
-    this.state = { showhide: false, currentPerson: null };
+    this.state = { showhide: false, currentPerson: null,cast:null };
   }
   setupCast = () => {
-    if (this.props.cast) {
+   
+    if (this.props.cast && this.props.cast.length>0) {
       let cast = this.props.cast;
       return cast.map(item => {
         return (
@@ -35,6 +38,8 @@ class Cast extends Component {
           </div>
         );
       });
+    }else{
+      return (<div>No information</div>)
     }
   };
   showPerson = () => {
@@ -92,7 +97,11 @@ class Cast extends Component {
   closePerson = () => {
     this.setState({ currentPerson: null });
   };
-
+  /*
+componentDidMount = ()=>{
+  Api.getCast()
+}
+*/
   render() {
     return (
       <div style={this.props.style}>

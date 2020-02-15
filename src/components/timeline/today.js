@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React, { Component,Fragment } from "react";
 import Api from "../../api/api";
 import GridHead from "./gridhead";
 import NetworkSchedule from "./gridnetwork";
-
+import FullTimeLine from"./fulltimeline";
 class Timeline extends Component {
   constructor(props) {
     super(props);
@@ -105,6 +105,7 @@ class Timeline extends Component {
     return (
       <div>
         <h4>Timeline</h4>
+        <Fragment><FullTimeLine network={this.state.network}></FullTimeLine> </Fragment> 
         <div className="todays">
           <GridHead
             currentStartTime={this.state.currentStartTime}

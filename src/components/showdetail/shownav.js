@@ -1,17 +1,20 @@
 import React, { Component } from "react";
 import { Button } from "react-bootstrap";
-import Cast from "./cast";
+import Cast from "../cast/cast";
+import Crew from "../crew/crew";
 import Episodes from "./episodes";
 
 class ShowNav extends Component {
   state = {
-    show: this.props.show,
+    show: null,
     activeSubject: 0,
     subjects: [
       { name: "Episodes", active: "active", visible: "block" },
-      { name: "Cast", active: "inactive", visible: "none" }
+      { name: "Cast", active: "inactive", visible: "none" },
+      { name: "Crew", active: "inactive", visible: "none" }
     ],
     cast: null,
+    crew: null,
     episodes: null
   };
   setAllSubjectsInActive = () => {
@@ -38,7 +41,9 @@ class ShowNav extends Component {
   };
 
   setupSubjects = () => {
+    
     return this.state.subjects.map((item, index) => {
+     
       return (
         <li key={"sub" + index}>
           <Button
@@ -56,21 +61,15 @@ class ShowNav extends Component {
     });
   };
 
-  componentDidMount = () => {
-    if (this.props.show) {
-      fetch("http://api.tvmaze.com/shows/" + this.state.show.show.id + "/cast")
-        .then(response => response.json())
-        .then(results => {
-          this.setState({
-            cast: results
-          });
-        })
-        .catch(error => this.setState({ cast: null }));
-    }
-  };
+
+componentDidUpdate=(prevProps, prevState, snapshot)=>{
+  if(prevProps.show !==prevState.show){
+    this.setState({show:prevProps.show})
+  }
+}
   render() {
     return (
-      <div className="showalldata">
+      <div className="showdetails">
         <ul className="shownav">{this.setupSubjects()}</ul>
 
         <Episodes
@@ -78,7 +77,8 @@ class ShowNav extends Component {
           allepisodes={this.props.allepisodes}
           show={this.props.show}
         />
-        <Cast style={this.ListnerToSubjectsVisible(1)} cast={this.props.cast} />
+        <Cast style={this.ListnerToSubjectsVisible(1)} cast={this.props.cast} showid={this.props.show} />
+        <Crew style={this.ListnerToSubjectsVisible(2)} show={this.props.show} />
       </div>
     );
   }

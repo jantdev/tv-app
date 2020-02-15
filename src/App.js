@@ -16,7 +16,10 @@ class App extends Component {
   state = {
     selectedShow: null,
     selectedNetwork: null
+   
   };
+
+
   _SetShow = value => {
     this.setState({ selectedShow: value });
   };
@@ -30,7 +33,7 @@ class App extends Component {
           <div className="content">
             <header>
               <Container className="mb-2 pt-2">
-                <Row className="_top">
+                <Row className="toptolls">
                   <Col lg={3}>
                     <div className="demo">It's just a laptop demo</div>
                   </Col>

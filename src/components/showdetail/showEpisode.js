@@ -13,6 +13,7 @@ class ShowEpisode extends Component {
       episode: null,
       allepisodes: null,
       cast: null,
+      crew:null,
       summery: "<p>No summery(yet)</p>"
     };
   }
@@ -45,10 +46,18 @@ class ShowEpisode extends Component {
             cast: cast
           });
         });
+      })
+      .then(() => {
+        Api.getCrew(show[0]).then(crew => {
+          this.setState({
+            crew: crew
+          });
+        });
       });
   };
   setupEpisode = () => {
     if (this.state.episode) {
+     
       const ep = this.state.episode[0];
       document.title = ep.name;
       return (

@@ -61,7 +61,7 @@ class SearchTitle extends Component {
             ref="searchValue"
           />
         </InputGroup>
-        <div className="holder">{this.ShowSearchResults()}</div>
+        <div>{this.ShowSearchResults()}</div>
       </div>
     );
   }

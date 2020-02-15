@@ -8,6 +8,7 @@ class ShowDetail extends Component {
   state = {
     show: null,
     cast: null,
+    crew:null,
     allepisodes: null
   };
 
@@ -55,8 +56,13 @@ class ShowDetail extends Component {
         this.setState({ show: i });
       })
       .then(() => {
-        Api.getCast(this.props.match.params.id).then(c => {
-          this.setState({ cast: c });
+        Api.getCast(this.props.match.params.id).then(cast => {
+          this.setState({ cast: cast });
+        });
+      })
+      .then(() => {
+        Api.getCrew(this.props.match.params.id).then(crew => {
+          this.setState({ crew: crew });
         });
       })
       .then(() => {
@@ -94,6 +100,7 @@ class ShowDetail extends Component {
             <ShowNav
               show={this.state.show}
               cast={this.state.cast}
+              
               allepisodes={this.state.allepisodes}
             />
           </Col>

@@ -1,0 +1,18 @@
+.showdetails{
+
+  .shownav {
+      list-style-type: none;
+      display: flex;
+      padding: 0px 10px;
+      background: #ddd;
+      li {
+        margin-right: 10px;
+        color: #333;
+        padding: 10px;
+      }
+      .active {
+        background: #333;
+        color: #fff;
+      }
+    }
+}

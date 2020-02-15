@@ -10,7 +10,9 @@ class Frontpage extends Component {
     load: false,
     shows: null,
     showsByCategory: null,
-    displayShowsByCategory: "none"
+    displayShowsByCategory: "none",
+    test:[-1, -2, -3, 4, 5, 6]    
+
   };
   frontpageSelectShow = o => {
     this.props.handleSelectShow(o);
@@ -39,6 +41,24 @@ class Frontpage extends Component {
 
     return nd.toDateString().replace(" " + d.getFullYear(), "");
   };
+
+  testno = (a)=>{
+    const f = a.sort().filter(no => no>0)
+    const s = [...new Set(f)]
+   
+    if(s.length===0){
+      return 1
+  }
+    let lowno = Math.min(...s);
+    for(let x = 0;x<s.length;x++){
+      lowno++
+      if(lowno >s[x] && lowno <s[x+1]){
+        return lowno 
+      }else if(s.length===x+1){
+        return lowno
+      }
+    }
+  }
   componentDidMount = () => {
     Api.ToDaysShow().then(o => {
       this.setState({
@@ -56,6 +76,7 @@ class Frontpage extends Component {
             <Row>
               <Col>
                 <h2>Popular shows airing today</h2>
+                <h3>{this.testno(this.state.test)}</h3>
               </Col>
             </Row>
             <Row>

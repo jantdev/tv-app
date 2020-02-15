@@ -1,0 +1,11 @@
+.footer {
+    height: 400px;
+    background: $darkmain;
+    padding-top: 30px;
+    margin-top: 30px;
+    color: $mainwhite;
+    .link {
+      text-decoration: none;
+      color: $mainwhite;
+    }
+  }

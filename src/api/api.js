@@ -59,6 +59,16 @@ const Api = {
       return null;
     }
   },
+  getCrew(showid) {
+    if (showid) {
+      return loadJson(this.url + "shows/" + showid + "/crew").catch(error => {
+        console.log(error);
+        return error;
+      });
+    } else {
+      return null;
+    }
+  },
   searchTitle(query) {
     if (query) {
       return loadJson(this.url + "/search/shows?q=:" + query).catch(error => {
